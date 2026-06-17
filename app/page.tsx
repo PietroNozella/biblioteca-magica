@@ -60,10 +60,10 @@ const phases: Phase[] = [
     successMessage:
       "A duvida range como madeira antiga. A palavra-pista cai de dentro do retrato:",
     theme: {
-      background: "#24130f",
-      accent: "#d8a35d",
-      accentSoft: "rgba(216, 163, 93, 0.2)",
-      shelf: "#563322",
+      background: "#120F0C",
+      accent: "#B89458",
+      accentSoft: "rgba(184, 148, 88, 0.16)",
+      shelf: "#30251E",
     },
   },
   {
@@ -88,10 +88,10 @@ const phases: Phase[] = [
     successMessage:
       "A tampa do caixao se abre com elegancia maldosa. A palavra-pista aparece:",
     theme: {
-      background: "#18211d",
-      accent: "#b9c58b",
-      accentSoft: "rgba(185, 197, 139, 0.18)",
-      shelf: "#344238",
+      background: "#17120F",
+      accent: "#B89458",
+      accentSoft: "rgba(184, 148, 88, 0.14)",
+      shelf: "#3A171C",
     },
   },
   {
@@ -116,10 +116,10 @@ const phases: Phase[] = [
     successMessage:
       "A vela vacila; por um instante, a culpa fica legivel. A palavra-pista surge:",
     theme: {
-      background: "#151d2b",
-      accent: "#9eb7dc",
-      accentSoft: "rgba(158, 183, 220, 0.2)",
-      shelf: "#293850",
+      background: "#120F0C",
+      accent: "#B89458",
+      accentSoft: "rgba(184, 148, 88, 0.14)",
+      shelf: "#30251E",
     },
   },
   {
@@ -144,10 +144,10 @@ const phases: Phase[] = [
     successMessage:
       "A neve se abre em silencio ao lado dos trilhos. A palavra-pista fica sobre o banco da estacao:",
     theme: {
-      background: "#20242a",
-      accent: "#d9e3ea",
-      accentSoft: "rgba(217, 227, 234, 0.18)",
-      shelf: "#3c4650",
+      background: "#17120F",
+      accent: "#B89458",
+      accentSoft: "rgba(184, 148, 88, 0.15)",
+      shelf: "#2A1F19",
     },
   },
   {
@@ -172,10 +172,10 @@ const phases: Phase[] = [
     successMessage:
       "O silencio cede, nao como explicacao, mas como revelacao. A palavra-pista aparece:",
     theme: {
-      background: "#2a2620",
-      accent: "#f1dfb6",
-      accentSoft: "rgba(241, 223, 182, 0.18)",
-      shelf: "#5b5140",
+      background: "#120F0C",
+      accent: "#B89458",
+      accentSoft: "rgba(184, 148, 88, 0.15)",
+      shelf: "#30251E",
     },
   },
   {
@@ -200,10 +200,10 @@ const phases: Phase[] = [
     successMessage:
       "A palavra atravessa a poeira e encontra passagem. A pista fica presa a um marcador de couro:",
     theme: {
-      background: "#291c12",
-      accent: "#e1a65a",
-      accentSoft: "rgba(225, 166, 90, 0.2)",
-      shelf: "#694123",
+      background: "#17120F",
+      accent: "#B89458",
+      accentSoft: "rgba(184, 148, 88, 0.15)",
+      shelf: "#3A171C",
     },
   },
   {
@@ -228,10 +228,10 @@ const phases: Phase[] = [
     successMessage:
       "A ultima fechadura entende a frase inteira. A palavra final e revelada:",
     theme: {
-      background: "#1d1729",
-      accent: "#d6b3ff",
-      accentSoft: "rgba(214, 179, 255, 0.2)",
-      shelf: "#41305f",
+      background: "#120F0C",
+      accent: "#B89458",
+      accentSoft: "rgba(184, 148, 88, 0.16)",
+      shelf: "#30251E",
     },
   },
 ];
@@ -428,20 +428,20 @@ export default function Home() {
 
   return (
     <main
-      className="room-vignette min-h-screen overflow-hidden px-5 py-6 text-stone-100 transition-colors duration-500 sm:px-8"
+      className="room-vignette min-h-screen overflow-hidden px-5 py-6 text-stone-100 transition-colors duration-500 sm:px-8 lg:py-8"
       style={
         {
           "--room-bg": phase.theme.background,
         } as CSSProperties
       }
     >
-      <div className="mx-auto flex min-h-[calc(100vh-3rem)] w-full max-w-6xl flex-col">
-        <header className="flex flex-col gap-4 border-b border-white/10 pb-4 sm:flex-row sm:items-start sm:justify-between">
+      <div className="mx-auto flex min-h-[calc(100vh-3rem)] w-full max-w-[1160px] flex-col">
+        <header className="site-header flex flex-col gap-4 pb-5 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-stone-300">
+            <p className="site-eyebrow">
               Enigma de aniversario
             </p>
-            <h1 className="font-literary mt-1 text-2xl text-stone-50 sm:text-3xl">
+            <h1 className="font-literary mt-1 text-2xl text-[var(--ivory-100)] sm:text-3xl">
               A Biblioteca Secreta de Ludmila
             </h1>
           </div>
@@ -449,18 +449,18 @@ export default function Home() {
           <button
             type="button"
             onClick={resetProgress}
-            className="self-start rounded-full border border-white/10 px-3 py-1.5 text-[11px] uppercase tracking-[0.2em] text-stone-300 transition hover:border-white/25 hover:bg-white/10 hover:text-stone-100 focus:outline-none focus:ring-2 focus:ring-white/35"
+            className="reset-button self-start"
           >
             Resetar progresso
           </button>
         </header>
 
-        <section className="grid flex-1 items-center gap-8 py-8 lg:grid-cols-[1.05fr_0.95fr]">
+        <section className="main-grid grid flex-1 items-start gap-6 py-6 lg:grid-cols-[0.72fr_1.28fr] lg:gap-8 lg:py-8">
           <LibraryVisual phase={phase} />
 
           <div
             key={screen === "game" ? `game-${phase.id}` : screen}
-            className="page-turn-panel"
+            className="page-turn-panel order-1 min-w-0 lg:order-2"
           >
             {screen === "intro" && (
               <IntroPanel
@@ -479,10 +479,10 @@ export default function Home() {
 
             {screen === "game" && (
               <GamePanel
-              answer={answer}
-              feedback={feedback}
-              feedbackTone={feedbackTone}
-              hintCount={hintCount}
+                answer={answer}
+                feedback={feedback}
+                feedbackTone={feedbackTone}
+                hintCount={hintCount}
                 phase={phase}
                 phaseIndex={phaseIndex}
                 progress={progress}
@@ -517,7 +517,7 @@ function OpeningScreen() {
             <p className="folio-kicker text-center">
               Biblioteca em silencio
             </p>
-            <div className="mx-auto mt-5 h-px w-24 bg-[rgba(228,208,177,0.35)]" />
+            <div className="opening-divider mx-auto mt-5 h-px w-24" />
             <h1 className="folio-title mt-8 text-4xl leading-tight sm:text-6xl">
               A biblioteca esta abrindo suas portas...
             </h1>
@@ -546,15 +546,15 @@ function LibraryVisual({ phase }: { phase: Phase }) {
   ];
 
   return (
-    <div className="library-visual relative min-h-[340px] p-6 sm:min-h-[520px]">
+    <div className="library-visual relative order-2 min-h-[300px] p-6 sm:min-h-[360px] lg:order-1 lg:min-h-[520px]">
       <div
-        className="absolute inset-0 opacity-80"
+        className="absolute inset-0 opacity-70"
         style={{
           background: `radial-gradient(circle at 45% 20%, ${phase.theme.accentSoft}, transparent 24rem)`,
         }}
       />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,247,228,0.02),transparent_24%,rgba(0,0,0,0.18)_100%)]" />
-      <div className="absolute left-6 right-6 top-12 h-px bg-white/10" />
+      <div className="visual-shade absolute inset-0" />
+      <div className="visual-rule absolute left-6 right-6 top-12 h-px" />
       <div className="absolute bottom-20 left-6 right-6 h-3 rounded-full bg-black/30" />
       <div
         className="absolute bottom-24 left-8 right-8 h-4 rounded-sm"
@@ -580,14 +580,14 @@ function LibraryVisual({ phase }: { phase: Phase }) {
         ))}
       </div>
 
-      <div className="paper-texture absolute right-6 top-24 w-44 max-w-[48%] rounded-[6px] border border-[rgba(40,27,17,0.14)] bg-[linear-gradient(180deg,#f5eddf_0%,#eadfcd_100%)] p-5 text-stone-900 shadow-2xl sm:right-8 sm:w-56">
+      <div className="room-note paper-texture absolute right-6 top-24 w-44 max-w-[48%] rounded-[6px] p-5 sm:right-8 sm:w-56">
         <p className="font-literary text-lg leading-tight text-[var(--ink-900)]">
           {phase.room}
         </p>
         <p className="mt-3 text-[11px] uppercase tracking-[0.28em] text-[var(--ink-700)]">
           Sala {phase.id}
         </p>
-        <div className="mt-4 h-px w-14 bg-[rgba(89,67,45,0.22)]" />
+        <div className="room-note-rule mt-4 h-px w-14" />
       </div>
 
       <div
@@ -595,7 +595,7 @@ function LibraryVisual({ phase }: { phase: Phase }) {
         style={{ backgroundColor: phase.theme.accentSoft }}
       />
 
-      <div className="absolute bottom-8 left-8 right-8 flex flex-wrap items-center justify-between gap-2 text-[11px] uppercase tracking-[0.28em] text-stone-300">
+      <div className="visual-footer absolute bottom-8 left-8 right-8 flex flex-wrap items-center justify-between gap-2">
         <span>{phase.author}</span>
         <span>{phase.catalogCode}</span>
       </div>
@@ -613,7 +613,7 @@ function IntroPanel({
   onStart: () => void;
 }) {
   return (
-    <div className="folio-panel max-w-2xl">
+    <div className="folio-panel w-full">
       <div className="folio-surface">
         <p className="folio-kicker">Entrada reservada</p>
         <div className="folio-rule mt-4 max-w-28" />
@@ -654,7 +654,7 @@ function RulesPanel({
   onStart: () => void;
 }) {
   return (
-    <div className="folio-panel max-w-2xl">
+    <div className="folio-panel w-full">
       <div className="folio-surface">
         <p className="folio-kicker">Regras da biblioteca</p>
         <div className="folio-rule mt-4 max-w-32" />
@@ -729,7 +729,7 @@ function GamePanel({
           : "feedback-note";
 
   return (
-    <div className="folio-panel max-w-3xl">
+    <div className="folio-panel w-full">
       <div className="folio-surface">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
@@ -764,7 +764,7 @@ function GamePanel({
               );
             })}
           </div>
-          <div className="mt-4 h-2 overflow-hidden rounded-full bg-[rgba(255,248,235,0.08)]">
+          <div className="progress-track mt-4 h-2 overflow-hidden rounded-full">
           <div
             className="h-full rounded-full transition-all duration-500"
             style={{
@@ -862,11 +862,11 @@ function GamePanel({
           </div>
         )}
 
-        <div className="mt-8 border-t border-[rgba(231,216,191,0.09)] pt-5">
+        <div className="clue-list mt-8 pt-5">
           <p className="folio-meta">Palavras-pista desbloqueadas</p>
           <div className="mt-3 flex min-h-9 flex-wrap gap-2">
             {unlockedClues.length === 0 ? (
-              <span className="text-sm text-[rgba(221,201,171,0.5)]">Nenhuma ainda.</span>
+              <span className="empty-clue text-sm">Nenhuma ainda.</span>
             ) : (
               unlockedClues.map((clue) => (
                 <span
@@ -892,7 +892,7 @@ function CompletePanel({
   onReset: () => void;
 }) {
   return (
-    <div className="folio-panel max-w-3xl">
+    <div className="folio-panel w-full">
       <div className="folio-surface">
         <p className="folio-kicker">Biblioteca aberta</p>
         <div className="folio-rule mt-4 max-w-32" />
