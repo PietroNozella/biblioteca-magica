@@ -46,19 +46,19 @@ const phases: Phase[] = [
     catalogCode: "MCH-I",
     room: "Sala dos Olhos de Ressaca",
     narrative:
-      "A primeira sala cheira a papel guardado e missa antiga. Um retrato observa de lado, como se soubesse mais do que aceita dizer. Sobre a escrivaninha, memorias tentam parecer prova, mas tremem sempre que passam pelos olhos dela.",
+      "A primeira sala cheira a papel guardado e missa antiga. Um retrato observa de lado, como se soubesse mais do que aceita dizer. Sobre a escrivaninha, memórias tentam parecer prova, mas tremem sempre que passam pelos olhos dela.",
     riddle:
-      "Nao procures o culpado. Procura a voz que envelheceu dentro da propria suspeita: menino prometido ao altar, homem fechado na casa que fez para repetir a casa perdida.",
+      "Não procures o culpado. Procura a voz que envelheceu dentro da própria suspeita: menino prometido ao altar, homem fechado na casa que fez para repetir a casa perdida.",
     clue: "NA",
     answers: ["bentinho", "dom casmurro"],
     hints: [
-      "O olhar que move esta sala nao e resposta; e ferida lembrada muitas vezes.",
-      "A chave aceita o apelido do narrador ou o nome que ele carregava antes do ciume virar arquitetura.",
+      "O olhar que move esta sala não é resposta; é ferida lembrada muitas vezes.",
+      "A chave aceita o apelido do narrador ou o nome que ele carregava antes do ciúme virar arquitetura.",
     ],
     errorMessage:
-      "A estante nao se move. Talvez voce tenha seguido o olhar errado; volte a memoria que acusa enquanto finge apenas lembrar.",
+      "A estante não se move. Talvez você tenha seguido o olhar errado; volte à memória que acusa enquanto finge apenas lembrar.",
     successMessage:
-      "A duvida range como madeira antiga. A palavra-pista cai de dentro do retrato:",
+      "A dúvida range como madeira antiga. A palavra-pista cai de dentro do retrato:",
     theme: {
       background: "#120F0C",
       accent: "#B89458",
@@ -68,25 +68,25 @@ const phases: Phase[] = [
   },
   {
     id: 2,
-    title: "Memorias Postumas de Bras Cubas",
+    title: "Memórias Póstumas de Brás Cubas",
     author: "Machado de Assis",
-    artifact: "tinteiro funerario",
+    artifact: "tinteiro funerário",
     catalogCode: "MCH-II",
     room: "Gabinete do Defunto Autor",
     narrative:
-      "Neste gabinete, a pena escreve sem pulso. Ha flores murchas no canto, um epitafio dobrado como marcador e uma gargalhada fina atravessando o marmore. Quem narra daqui ja nao deve satisfacoes aos vivos.",
+      "Neste gabinete, a pena escreve sem pulso. Há flores murchas no canto, um epitáfio dobrado como marcador e uma gargalhada fina atravessando o mármore. Quem narra daqui já não deve satisfações aos vivos.",
     riddle:
-      "A dedicatoria nao consola: oferece o corpo ao primeiro leitor subterraneo. Entre a campa e o capitulo, a vaidade ainda respira, mas so por ironia.",
+      "A dedicatória não consola: oferece o corpo ao primeiro leitor subterrâneo. Entre a campa e o capítulo, a vaidade ainda respira, mas só por ironia.",
     clue: "SUA",
     answers: ["bras cubas"],
     hints: [
-      "Quem fala aqui comeca depois do fim, como se a morte fosse apenas uma vantagem literaria.",
-      "A chave tem duas palavras e pertence ao defunto autor das memorias.",
+      "Quem fala aqui começa depois do fim, como se a morte fosse apenas uma vantagem literária.",
+      "A chave tem duas palavras e pertence ao defunto autor das memórias.",
     ],
     errorMessage:
-      "O tinteiro permanece frio. A resposta nao esta no luto, mas no morto que transformou o proprio enterro em prologo.",
+      "O tinteiro permanece frio. A resposta não está no luto, mas no morto que transformou o próprio enterro em prólogo.",
     successMessage:
-      "A tampa do caixao se abre com elegancia maldosa. A palavra-pista aparece:",
+      "A tampa do caixão se abre com elegância maldosa. A palavra-pista aparece:",
     theme: {
       background: "#17120F",
       accent: "#B89458",
@@ -97,24 +97,24 @@ const phases: Phase[] = [
   {
     id: 3,
     title: "Crime e Castigo",
-    author: "Fiodor Dostoievski",
+    author: "Fiódor Dostoiévski",
     artifact: "vela de febre curta",
     catalogCode: "DST-III",
-    room: "Quarto de Sao Petersburgo",
+    room: "Quarto de São Petersburgo",
     narrative:
-      "O quarto e estreito, umido, febril. O ar pesa como pensamento mal dormido. No corredor, passos sobem e descem; dentro, uma teoria tenta justificar o sangue, mas a consciencia nao aceita silogismos.",
+      "O quarto é estreito, úmido, febril. O ar pesa como pensamento mal dormido. No corredor, passos sobem e descem; dentro, uma teoria tenta justificar o sangue, mas a consciência não aceita silogismos.",
     riddle:
-      "Ele quis medir a alma com uma ideia. Depois do golpe, descobriu que a culpa nao fica no lugar do crime: acompanha, arde, delira e exige nome.",
+      "Ele quis medir a alma com uma ideia. Depois do golpe, descobriu que a culpa não fica no lugar do crime: acompanha, arde, delira e exige nome.",
     clue: "WISHLIST",
     answers: ["raskolnikov"],
     hints: [
-      "A chave e o nome daquele que acredita estar acima da lei ate ouvir a propria febre.",
-      "Pense no estudante de Petersburgo que encontra castigo antes mesmo da sentenca.",
+      "A chave é o nome daquele que acredita estar acima da lei até ouvir a própria febre.",
+      "Pense no estudante de Petersburgo que encontra castigo antes mesmo da sentença.",
     ],
     errorMessage:
-      "A febre aumenta, mas a porta nao cede. A resposta precisa carregar crime e consciencia no mesmo corpo.",
+      "A febre aumenta, mas a porta não cede. A resposta precisa carregar crime e consciência no mesmo corpo.",
     successMessage:
-      "A vela vacila; por um instante, a culpa fica legivel. A palavra-pista surge:",
+      "A vela vacila; por um instante, a culpa fica legível. A palavra-pista surge:",
     theme: {
       background: "#120F0C",
       accent: "#B89458",
@@ -124,25 +124,25 @@ const phases: Phase[] = [
   },
   {
     id: 4,
-    title: "Anna Karenina",
-    author: "Liev Tolstoi",
+    title: "Anna Kariênina",
+    author: "Liev Tolstói",
     artifact: "luva junto aos trilhos",
     catalogCode: "TLS-IV",
-    room: "Estacao Sob a Neve",
+    room: "Estação Sob a Neve",
     narrative:
-      "A neve suaviza tudo, menos o ruido dos trilhos. Sob casacos, bailes e cumprimentos, a sociedade vigia com olhos impecaveis. Uma paixao atravessa a plataforma como chama que nao aprendeu a obedecer ao inverno.",
+      "A neve suaviza tudo, menos o ruído dos trilhos. Sob casacos, bailes e cumprimentos, a sociedade vigia com olhos impecáveis. Uma paixão atravessa a plataforma como chama que não aprendeu a obedecer ao inverno.",
     riddle:
-      "O trem ainda nao chegou, mas seu destino ja risca o chao. Quem passa por esta sala leva no nome a beleza, a queda e a coragem terrivel de desejar contra todos.",
+      "O trem ainda não chegou, mas seu destino já risca o chão. Quem passa por esta sala leva no nome a beleza, a queda e a coragem terrível de desejar contra todos.",
     clue: "MORA",
     answers: ["anna", "anna karienina", "anna karenina"],
     hints: [
       "A chave pode ser apenas o primeiro nome da mulher diante dos trilhos.",
-      "Se preferir, diga o nome inteiro que Tolstoi colocou sob a neve.",
+      "Se preferir, diga o nome inteiro que Tolstói colocou sob a neve.",
     ],
     errorMessage:
-      "O trem passa sem parar. A chave esta na mulher que a sociedade observa antes de compreender.",
+      "O trem passa sem parar. A chave está na mulher que a sociedade observa antes de compreender.",
     successMessage:
-      "A neve se abre em silencio ao lado dos trilhos. A palavra-pista fica sobre o banco da estacao:",
+      "A neve se abre em silêncio ao lado dos trilhos. A palavra-pista fica sobre o banco da estação:",
     theme: {
       background: "#17120F",
       accent: "#B89458",
@@ -152,25 +152,25 @@ const phases: Phase[] = [
   },
   {
     id: 5,
-    title: "A Paixao Segundo G.H.",
+    title: "A Paixão Segundo G.H.",
     author: "Clarice Lispector",
     artifact: "gaveta de quarto branco",
     catalogCode: "CLR-V",
     room: "Quarto Branco",
     narrative:
-      "O quarto branco parece vazio, mas nada ali e simples. O silencio tem bordas afiadas. Uma mulher entra para arrumar o mundo e encontra, no minimo e no intoleravel, uma epifania que desmonta rosto, classe, nome e pronome.",
+      "O quarto branco parece vazio, mas nada ali é simples. O silêncio tem bordas afiadas. Uma mulher entra para arrumar o mundo e encontra, no mínimo e no intolerável, uma epifania que desmonta rosto, classe, nome e pronome.",
     riddle:
-      "Nao ha retrato completo na porta, so duas letras. Elas bastam para quem atravessa a experiencia de perder a forma e tocar o nucleo vivo, impessoal, quase sem linguagem.",
+      "Não há retrato completo na porta, só duas letras. Elas bastam para quem atravessa a experiência de perder a forma e tocar o núcleo vivo, impessoal, quase sem linguagem.",
     clue: "UM",
     answers: ["gh", "a paixao segundo gh"],
     hints: [
-      "A chave e minima, como a identidade que o quarto comeca a desfazer.",
-      "Tambem abre a porta o titulo clariceano sem acentos.",
+      "A chave é mínima, como a identidade que o quarto começa a desfazer.",
+      "Também abre a porta o título clariceano sem acentos.",
     ],
     errorMessage:
       "O branco permanece intacto. A resposta precisa ser pequena o bastante para caber numa identidade reduzida a iniciais.",
     successMessage:
-      "O silencio cede, nao como explicacao, mas como revelacao. A palavra-pista aparece:",
+      "O silêncio cede, não como explicação, mas como revelação. A palavra-pista aparece:",
     theme: {
       background: "#120F0C",
       accent: "#B89458",
@@ -180,23 +180,23 @@ const phases: Phase[] = [
   },
   {
     id: 6,
-    title: "Grande Sertao: Veredas",
-    author: "Guimaraes Rosa",
+    title: "Grande Sertão: Veredas",
+    author: "Guimarães Rosa",
     artifact: "marcador de couro cru",
     catalogCode: "GRS-VI",
     room: "Vereda do Pacto",
     narrative:
-      "A biblioteca se abre em vereda: terra vermelha, buriti, poeira e fala em redemoinho. Aqui a lingua nao descreve o mundo; ela o refaz. Entre amor, guerra e pacto, a travessia pergunta se o diabo existe ou se nasce do medo de escolher.",
+      "A biblioteca se abre em vereda: terra vermelha, buriti, poeira e fala em redemoinho. Aqui a língua não descreve o mundo; ela o refaz. Entre amor, guerra e pacto, a travessia pergunta se o diabo existe ou se nasce do medo de escolher.",
     riddle:
-      "A chave e de quem conta para entender, e entende cada vez menos. Jagunco e filosofo, amante e sobrevivente, ele atravessa o sertao como quem atravessa a propria linguagem.",
+      "A chave é de quem conta para entender, e entende cada vez menos. Jagunço e filósofo, amante e sobrevivente, ele atravessa o sertão como quem atravessa a própria linguagem.",
     clue: "NOVO",
     answers: ["riobaldo", "grande sertao veredas"],
     hints: [
       "Procure a voz que fala com o senhor e carrega Diadorim como segredo.",
-      "O nome do narrador abre a porta; o titulo sem acentos tambem.",
+      "O nome do narrador abre a porta; o título sem acentos também.",
     ],
     errorMessage:
-      "A vereda se bifurca. A resposta ainda nao tem a voz do sertao: fala, pacto, duvida e travessia.",
+      "A vereda se bifurca. A resposta ainda não tem a voz do sertão: fala, pacto, dúvida e travessia.",
     successMessage:
       "A palavra atravessa a poeira e encontra passagem. A pista fica presa a um marcador de couro:",
     theme: {
@@ -208,25 +208,25 @@ const phases: Phase[] = [
   },
   {
     id: 7,
-    title: "A Ultima Estante",
+    title: "A Última Estante",
     author: "Biblioteca Secreta",
     artifact: "lista dobrada em sete",
     catalogCode: "BST-VII",
     room: "Sala da Wishlist",
     narrative:
-      "A ultima sala e mais clara, mas nao menos secreta. As palavras-pista repousam sobre a mesa como lombadas em ordem. Nenhum autor exige resposta agora; a biblioteca so pede que Ludmila leia o que as salas escreveram juntas.",
+      "A última sala é mais clara, mas não menos secreta. As palavras-pista repousam sobre a mesa como lombadas em ordem. Nenhum autor exige resposta agora; a biblioteca só pede que Ludmila leia o que as salas escreveram juntas.",
     riddle:
-      "Na sua wishlist mora um novo que? A chave final nao esta escondida em outro romance, mas no objeto que todos estes corredores celebraram.",
+      "Na sua wishlist mora um novo quê? A chave final não está escondida em outro romance, mas no objeto que todos estes corredores celebraram.",
     clue: "LIVRO",
     answers: ["livro", "wishlist"],
     hints: [
-      "Leia as pistas em sequencia: elas ja quase dizem a resposta.",
-      "A biblioteca inteira foi construida para conduzir a este presente.",
+      "Leia as pistas em sequência: elas já quase dizem a resposta.",
+      "A biblioteca inteira foi construída para conduzir a este presente.",
     ],
     errorMessage:
-      "A frase ainda nao fecha. Junte as palavras-pista como quem alinha lombadas na estante.",
+      "A frase ainda não fecha. Junte as palavras-pista como quem alinha lombadas na estante.",
     successMessage:
-      "A ultima fechadura entende a frase inteira. A palavra final e revelada:",
+      "A última fechadura entende a frase inteira. A palavra final é revelada:",
     theme: {
       background: "#120F0C",
       accent: "#B89458",
@@ -439,7 +439,7 @@ export default function Home() {
         <header className="site-header flex flex-col gap-4 pb-5 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <p className="site-eyebrow">
-              Enigma de aniversario
+              Enigma de aniversário
             </p>
             <h1 className="font-literary mt-1 text-2xl text-[var(--ivory-100)] sm:text-3xl">
               A Biblioteca Secreta de Ludmila
@@ -515,11 +515,11 @@ function OpeningScreen() {
         <div className="opening-card max-w-3xl text-center">
           <div className="folio-surface">
             <p className="folio-kicker text-center">
-              Biblioteca em silencio
+              Biblioteca em silêncio
             </p>
             <div className="opening-divider mx-auto mt-5 h-px w-24" />
             <h1 className="folio-title mt-8 text-4xl leading-tight sm:text-6xl">
-              A biblioteca esta abrindo suas portas...
+              A biblioteca está abrindo suas portas...
             </h1>
             <p className="folio-body mx-auto mt-6 max-w-2xl text-base sm:text-lg">
               Entre papel antigo, margens anotadas e estantes reservadas, uma sala
@@ -622,7 +622,7 @@ function IntroPanel({
         </h2>
         <p className="folio-body mt-7 max-w-xl text-base sm:text-lg">
           Ludmila foi convidada a atravessar uma biblioteca feita de autores que
-          ela ama. Cada sala guarda um enigma literario e uma palavra-pista.
+          ela ama. Cada sala guarda um enigma literário e uma palavra-pista.
         </p>
         <p className="folio-meta mt-7">Convite privado para uma leitora de estantes fundas</p>
         <div className="mt-9 flex flex-wrap gap-3">
@@ -662,11 +662,11 @@ function RulesPanel({
           Leia antes de abrir a primeira porta
         </h2>
         <ul className="folio-body mt-7 space-y-4 text-base">
-          <li>Cada fase e uma sala literaria com uma resposta escondida.</li>
-          <li>Respostas aceitam acentos, sem acentos, maiusculas, minusculas e pontuacao.</li>
-          <li>Ao acertar, uma palavra-pista sera desbloqueada.</li>
+          <li>Cada fase é uma sala literária com uma resposta escondida.</li>
+          <li>Respostas aceitam acentos, sem acentos, maiúsculas, minúsculas e pontuação.</li>
+          <li>Ao acertar, uma palavra-pista será desbloqueada.</li>
           <li>As sete pistas formam a frase que revela o presente.</li>
-          <li>O progresso fica salvo neste navegador e a biblioteca pode ajudar se voce travar.</li>
+          <li>O progresso fica salvo neste navegador e a biblioteca pode ajudar se você travar.</li>
         </ul>
         <div className="mt-9 flex flex-wrap gap-3">
           <button
@@ -674,7 +674,7 @@ function RulesPanel({
             onClick={onStart}
             className="editorial-button focus:outline-none focus:ring-2 focus:ring-[rgba(226,204,165,0.26)]"
           >
-            Comecar
+            Começar
           </button>
           <button
             type="button"
@@ -787,7 +787,7 @@ function GamePanel({
         <form className="catalog-card mt-8 space-y-5" onSubmit={onSubmit}>
           <div className="flex flex-wrap items-end justify-between gap-3">
             <label className="folio-meta block" htmlFor="answer">
-              Ficha de catalogo
+              Ficha de catálogo
             </label>
             <span className="room-legend">Anote o nome que abre a passagem.</span>
           </div>
@@ -856,7 +856,7 @@ function GamePanel({
             {canRequestPassage && (
               <p className="hint-note hint-reveal text-sm">
                 Se a sala continuar fechada, a biblioteca pode abrir a passagem sem
-                interromper a historia.
+                interromper a história.
               </p>
             )}
           </div>
@@ -900,31 +900,31 @@ function CompletePanel({
           {finalSentence}
         </h2>
         <p className="folio-body mt-7 text-base sm:text-lg">
-          Ludmila, as salas nao queriam testar memoria: queriam montar uma
-          dedicatoria. Machado deixou a duvida, Bras Cubas sorriu da morte,
-          Dostoievski acendeu a consciencia, Tolstoi cobriu os trilhos de neve,
+          Ludmila, as salas não queriam testar memória: queriam montar uma
+          dedicatória. Machado deixou a dúvida, Brás Cubas sorriu da morte,
+          Dostoiévski acendeu a consciência, Tolstói cobriu os trilhos de neve,
           Clarice desfez o nome e Rosa abriu a travessia.
         </p>
         <p className="folio-body mt-4 text-base sm:text-lg">
-          A frase encontrada revela o presente: ha um livro novo esperando por voce,
+          A frase encontrada revela o presente: há um livro novo esperando por você,
           escolhido da sua wishlist.
         </p>
         <div className="clue-note mt-8">
-          <p className="folio-meta mb-3">Dedicatoria final</p>
+          <p className="folio-meta mb-3">Dedicatória final</p>
           <p className="font-literary text-2xl text-[var(--gold-300)]">
             Presente revelado: um livro da wishlist, para continuar a biblioteca.
           </p>
         </div>
         <div className="certificate-card mt-8">
           <div className="certificate-card-inner">
-            <p className="certificate-kicker">Travessia Literaria</p>
+            <p className="certificate-kicker">Travessia Literária</p>
             <h3 className="font-literary text-3xl text-[var(--ink-900)] sm:text-4xl">
               Certificado de passagem secreta
             </h3>
             <p className="certificate-body mt-4">
-              Concede-se a Ludmila o titulo de leitora que atravessou sete salas,
+              Concede-se a Ludmila o título de leitora que atravessou sete salas,
               reuniu as palavras perdidas nas margens e encontrou, ao fim da
-              estante, um livro novo a sua espera.
+              estante, um livro novo à sua espera.
             </p>
           </div>
         </div>

@@ -38,7 +38,9 @@ body {
   min-height: 100vh;
   margin: 0;
   color: var(--text-main);
-  font-family: "Baskerville Old Face", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-family: var(--font-body), Georgia, serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
   background:
     radial-gradient(circle at 50% 30%, rgba(184, 148, 88, 0.11), transparent 31rem),
     radial-gradient(circle at 12% 8%, rgba(58, 23, 28, 0.16), transparent 25rem),
@@ -52,7 +54,14 @@ input {
 }
 
 .font-literary {
-  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-family: var(--font-display), "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+}
+
+.site-header h1.font-literary {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1;
 }
 
 .paper-texture {
@@ -173,11 +182,11 @@ input {
 }
 
 .site-eyebrow {
-  color: var(--text-muted);
-  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+  font-family: var(--font-detail), Georgia, serif;
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
@@ -187,10 +196,10 @@ input {
   background: var(--surface-900);
   color: var(--text-secondary);
   padding: 0.55rem 0.85rem;
-  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
-  font-size: 0.72rem;
+  font-family: var(--font-detail), Georgia, serif;
+  font-size: 0.76rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
 }
@@ -238,11 +247,11 @@ input {
 }
 
 .folio-kicker {
-  color: var(--text-muted);
-  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
+  color: var(--text-secondary);
+  font-family: var(--font-detail), Georgia, serif;
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.17em;
   text-transform: uppercase;
 }
 
@@ -254,34 +263,46 @@ input {
 
 .folio-title {
   color: var(--text-main);
-  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  line-height: 1.08;
+  font-family: var(--font-display), "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0.006em;
+  line-height: 0.98;
   text-wrap: balance;
+}
+
+.opening-card .folio-title {
+  font-weight: 700;
+  letter-spacing: 0.002em;
+}
+
+.folio-panel .folio-title {
+  font-weight: 600;
 }
 
 .folio-body {
   color: var(--text-main);
-  line-height: 2;
+  font-family: var(--font-body), Georgia, serif;
+  font-size: 1.03rem;
+  font-weight: 400;
+  line-height: 1.92;
 }
 
 .room-legend {
   color: var(--text-secondary);
-  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
-  font-size: 0.82rem;
+  font-family: var(--font-detail), Georgia, serif;
+  font-size: 0.86rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.075em;
   line-height: 1.8;
   text-transform: uppercase;
 }
 
 .folio-meta {
-  color: var(--text-secondary);
-  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  color: var(--ivory-200);
+  font-family: var(--font-detail), Georgia, serif;
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
 }
 
@@ -292,10 +313,10 @@ input {
   overflow: hidden;
   border-radius: 999px;
   padding: 0.98rem 1.45rem;
-  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
-  font-size: 0.84rem;
+  font-family: var(--font-detail), Georgia, serif;
+  font-size: 0.86rem;
   font-weight: 700;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.105em;
   text-transform: uppercase;
   transition:
     transform 160ms ease,
@@ -369,7 +390,7 @@ input {
   border: 1px solid var(--border-aged);
   background: var(--surface-900);
   padding: 0.7rem 1rem;
-  font-size: 0.74rem;
+  font-size: 0.8rem;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
@@ -378,10 +399,10 @@ input {
   border-radius: 999px;
   background: var(--surface-800);
   color: var(--text-secondary);
-  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
-  font-size: 0.74rem;
+  font-family: var(--font-detail), Georgia, serif;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -393,6 +414,9 @@ input {
     linear-gradient(180deg, rgba(48, 37, 30, 0.98), rgba(36, 28, 23, 0.98)),
     var(--surface-800);
   color: var(--text-main);
+  font-family: var(--font-body), Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.55;
   box-shadow:
     inset 0 1px 0 rgba(243, 232, 208, 0.08),
     inset 0 -8px 24px rgba(0, 0, 0, 0.16);
@@ -546,6 +570,18 @@ input {
     inset 0 1px 0 rgba(243, 232, 208, 0.08);
 }
 
+.clue-note .font-literary {
+  font-size: clamp(1.85rem, 2.45vw, 2.35rem);
+  font-weight: 600;
+  line-height: 1.22;
+}
+
+.room-note .font-literary {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
 .feedback-note,
 .hint-note,
 .clue-note {
@@ -554,7 +590,13 @@ input {
   border-radius: 8px;
   border: 1px solid var(--border-aged);
   padding: 1rem 1.05rem;
+  font-family: var(--font-body), Georgia, serif;
   line-height: 1.85;
+}
+
+.feedback-note,
+.hint-note {
+  font-size: 0.98rem;
 }
 
 .feedback-note {
@@ -610,6 +652,8 @@ input {
     linear-gradient(180deg, rgba(184, 148, 88, 0.12), rgba(184, 148, 88, 0.04)),
     var(--surface-800);
   color: var(--text-main);
+  font-family: var(--font-detail), Georgia, serif;
+  letter-spacing: 0.055em;
   box-shadow:
     0 0 20px rgba(184, 148, 88, 0.08),
     inset 0 1px 0 rgba(243, 232, 208, 0.08);
@@ -617,6 +661,7 @@ input {
 
 .empty-clue {
   color: var(--text-muted);
+  font-family: var(--font-body), Georgia, serif;
 }
 
 .opening-card {
@@ -713,10 +758,10 @@ input {
 
 .visual-footer {
   color: var(--text-secondary);
-  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
-  font-size: 0.72rem;
+  font-family: var(--font-detail), Georgia, serif;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   line-height: 1.6;
   text-transform: uppercase;
 }
@@ -748,10 +793,10 @@ input {
   border-radius: 999px;
   border: 1px dashed rgba(243, 232, 208, 0.42);
   color: var(--text-main);
-  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
-  font-size: 0.62rem;
+  font-family: var(--font-detail), Georgia, serif;
+  font-size: 0.66rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-align: center;
   text-transform: uppercase;
   line-height: 1.5;
@@ -797,18 +842,25 @@ input {
   text-align: center;
 }
 
+.certificate-card h3.font-literary {
+  font-weight: 700;
+  line-height: 1.05;
+}
+
 .certificate-kicker {
   color: var(--ink-700);
-  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
-  font-size: 0.72rem;
+  font-family: var(--font-detail), Georgia, serif;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.32em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
 }
 
 .certificate-body {
   color: var(--ink-900);
-  line-height: 1.9;
+  font-family: var(--font-body), Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.85;
 }
 
 @keyframes openingFade {
