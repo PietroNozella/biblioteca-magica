@@ -1,0 +1,854 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --wine-950: #120a0d;
+  --wine-900: #1d1015;
+  --wine-800: #2a161d;
+  --sepia-900: #2e221b;
+  --sepia-700: #584236;
+  --gold-500: #b9935a;
+  --gold-300: #dbc29a;
+  --ivory-100: #f5ecdf;
+  --ivory-200: #eadfce;
+  --ink-900: #241a15;
+  --ink-700: #5f4b3d;
+  --shadow-deep: rgba(9, 5, 4, 0.54);
+  --shadow-soft: rgba(17, 10, 8, 0.24);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ivory-100);
+  font-family: "Baskerville Old Face", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(214, 178, 120, 0.09), transparent 22rem),
+    radial-gradient(circle at 85% 8%, rgba(108, 45, 57, 0.14), transparent 26rem),
+    linear-gradient(180deg, #1a1013 0%, #120b0d 38%, #0a0708 100%);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.font-literary {
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+.paper-texture {
+  background-image:
+    radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.14), transparent 18%),
+    radial-gradient(circle at 82% 74%, rgba(102, 64, 36, 0.12), transparent 24%),
+    linear-gradient(135deg, rgba(128, 91, 56, 0.06) 0 1px, transparent 1px 8px);
+}
+
+.book-spine {
+  transform-origin: bottom;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 241, 214, 0.08),
+    inset -10px 0 18px rgba(0, 0, 0, 0.12),
+    0 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+.room-vignette {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(243, 219, 177, 0.11), transparent 34rem),
+    radial-gradient(circle at 88% 16%, rgba(119, 43, 55, 0.18), transparent 24rem),
+    linear-gradient(135deg, var(--room-bg), #10090b 78%);
+}
+
+.library-opening {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at top, rgba(217, 179, 120, 0.17), transparent 20rem),
+    radial-gradient(circle at bottom right, rgba(114, 35, 47, 0.16), transparent 26rem),
+    linear-gradient(140deg, #281317 0%, #160d10 52%, #0d0708 100%);
+}
+
+.room-vignette::before,
+.library-opening::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 20% 18%, rgba(255, 251, 241, 0.08) 0 1px, transparent 1.4px),
+    radial-gradient(circle at 72% 24%, rgba(208, 185, 145, 0.07) 0 1px, transparent 1.5px),
+    radial-gradient(circle at 34% 72%, rgba(105, 77, 55, 0.08) 0 1.2px, transparent 1.6px),
+    linear-gradient(135deg, rgba(255, 250, 242, 0.03) 0 1px, transparent 1px 8px),
+    linear-gradient(0deg, rgba(36, 22, 15, 0.08), rgba(36, 22, 15, 0.08));
+  background-size: 260px 220px, 320px 260px, 280px 240px, 12px 12px, auto;
+  opacity: 0.22;
+  mix-blend-mode: soft-light;
+}
+
+.room-vignette::after,
+.library-opening::after {
+  content: "";
+  position: absolute;
+  inset: -8%;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 48%, transparent 48%, rgba(3, 2, 2, 0.16) 72%, rgba(3, 2, 2, 0.52) 100%),
+    radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.22), transparent 36%);
+  opacity: 0.9;
+}
+
+.room-vignette > *,
+.library-opening > * {
+  position: relative;
+  z-index: 1;
+}
+
+.opening-card,
+.folio-panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid rgba(231, 214, 183, 0.12);
+  background:
+    linear-gradient(180deg, rgba(255, 247, 235, 0.08), rgba(255, 247, 235, 0.03)),
+    rgba(16, 10, 11, 0.48);
+  box-shadow:
+    0 32px 100px var(--shadow-deep),
+    0 10px 36px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 245, 224, 0.07);
+  backdrop-filter: blur(10px);
+}
+
+.opening-card::before,
+.folio-panel::before {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border: 1px solid rgba(234, 220, 194, 0.11);
+  border-radius: 7px;
+  pointer-events: none;
+}
+
+.opening-card::after,
+.folio-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(255, 255, 255, 0.05), transparent 16%),
+    radial-gradient(circle at 90% 22%, rgba(191, 143, 83, 0.07), transparent 18%),
+    radial-gradient(circle at 50% 100%, rgba(98, 37, 48, 0.09), transparent 26%);
+  pointer-events: none;
+}
+
+.folio-panel {
+  padding: 1.7rem;
+}
+
+.folio-surface {
+  position: relative;
+  z-index: 1;
+}
+
+.folio-surface > * {
+  animation: textRise 520ms ease both;
+}
+
+.folio-surface > *:nth-child(1) {
+  animation-delay: 40ms;
+}
+
+.folio-surface > *:nth-child(2) {
+  animation-delay: 90ms;
+}
+
+.folio-surface > *:nth-child(3) {
+  animation-delay: 140ms;
+}
+
+.folio-surface > *:nth-child(4) {
+  animation-delay: 190ms;
+}
+
+.folio-surface > *:nth-child(5) {
+  animation-delay: 240ms;
+}
+
+.folio-surface > *:nth-child(6) {
+  animation-delay: 290ms;
+}
+
+.folio-kicker {
+  color: rgba(234, 218, 189, 0.86);
+  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+}
+
+.folio-rule {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(233, 212, 180, 0.45), transparent 80%);
+}
+
+.folio-title {
+  color: var(--ivory-100);
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+.folio-body {
+  color: rgba(240, 230, 214, 0.86);
+  line-height: 1.9;
+}
+
+.room-legend {
+  color: rgba(228, 212, 189, 0.68);
+  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+
+.folio-meta {
+  color: rgba(230, 214, 186, 0.7);
+  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.editorial-button,
+.editorial-button-secondary,
+.editorial-button-ghost {
+  position: relative;
+  overflow: hidden;
+  border-radius: 999px;
+  padding: 0.95rem 1.4rem;
+  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background-color 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease,
+    opacity 160ms ease;
+}
+
+.editorial-button:hover,
+.editorial-button-secondary:hover,
+.editorial-button-ghost:hover {
+  transform: translateY(-1px);
+}
+
+.editorial-button::after,
+.editorial-button-secondary::after,
+.editorial-button-ghost::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(circle at 50% 40%, rgba(255, 236, 197, 0.26), transparent 58%);
+  opacity: 0;
+  transition: opacity 180ms ease;
+  pointer-events: none;
+}
+
+.editorial-button:hover::after,
+.editorial-button:focus-visible::after,
+.editorial-button-secondary:hover::after,
+.editorial-button-secondary:focus-visible::after,
+.editorial-button-ghost:hover::after,
+.editorial-button-ghost:focus-visible::after {
+  opacity: 1;
+}
+
+.editorial-button {
+  color: #251912;
+  border: 1px solid rgba(241, 225, 197, 0.44);
+  background:
+    linear-gradient(180deg, #e9d4b4 0%, #d0ab76 100%);
+  box-shadow:
+    0 12px 26px rgba(88, 53, 20, 0.25),
+    0 0 24px rgba(189, 141, 74, 0.08),
+    inset 0 1px 0 rgba(255, 248, 235, 0.74);
+}
+
+.editorial-button:focus-visible,
+.editorial-button-secondary:focus-visible,
+.editorial-button-ghost:focus-visible {
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.editorial-button-secondary {
+  color: rgba(248, 238, 223, 0.96);
+  border: 1px solid rgba(225, 202, 167, 0.22);
+  background: rgba(255, 247, 235, 0.06);
+  box-shadow:
+    0 10px 22px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 245, 224, 0.05);
+}
+
+.editorial-button-ghost {
+  color: rgba(226, 212, 191, 0.88);
+  border: 1px solid rgba(226, 212, 191, 0.12);
+  background: rgba(10, 7, 7, 0.22);
+  padding: 0.7rem 1rem;
+  font-size: 0.7rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.editorial-chip {
+  border: 1px solid rgba(226, 207, 174, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 249, 238, 0.05);
+  color: rgba(236, 224, 203, 0.8);
+  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.folio-input {
+  min-height: 3.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(234, 214, 180, 0.16);
+  background:
+    linear-gradient(180deg, rgba(255, 249, 238, 0.04), rgba(255, 249, 238, 0.015)),
+    rgba(13, 9, 9, 0.46);
+  color: var(--ivory-100);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 247, 232, 0.05),
+    inset 0 -8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-card {
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid rgba(230, 213, 184, 0.1);
+  padding: 1.25rem;
+  background:
+    linear-gradient(180deg, rgba(255, 248, 236, 0.05), rgba(255, 248, 236, 0.02)),
+    rgba(8, 5, 6, 0.2);
+  box-shadow: 0 20px 38px rgba(0, 0, 0, 0.18);
+}
+
+.catalog-card::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px dashed rgba(222, 199, 165, 0.1);
+  border-radius: 7px;
+  pointer-events: none;
+}
+
+.catalog-input-shell {
+  position: relative;
+}
+
+.catalog-input-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(243, 230, 203, 0.07), rgba(243, 230, 203, 0.02)),
+    repeating-linear-gradient(
+      180deg,
+      transparent 0,
+      transparent 17px,
+      rgba(207, 181, 148, 0.08) 17px,
+      rgba(207, 181, 148, 0.08) 18px
+    );
+  pointer-events: none;
+}
+
+.catalog-input-shell::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, rgba(201, 162, 102, 0.12), transparent 28%, transparent 72%, rgba(201, 162, 102, 0.08));
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.catalog-input {
+  position: relative;
+  z-index: 1;
+  padding-block: 1rem;
+}
+
+.door-button {
+  overflow: hidden;
+}
+
+.door-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform-origin: left center;
+  transform: scaleX(0.18);
+  background: linear-gradient(90deg, rgba(255, 236, 201, 0.22), transparent 48%);
+  transition: transform 220ms ease, opacity 220ms ease;
+  opacity: 0.55;
+}
+
+.door-button:hover::before,
+.door-button:focus-visible::before {
+  transform: scaleX(1);
+  opacity: 0.95;
+}
+
+.narrative-progress {
+  border-radius: 10px;
+  border: 1px solid rgba(233, 214, 183, 0.09);
+  padding: 1rem 1rem 0.95rem;
+  background: rgba(255, 249, 238, 0.03);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 248, 236, 0.04),
+    0 16px 30px rgba(0, 0, 0, 0.12);
+}
+
+.progress-orbit {
+  display: flex;
+  align-items: center;
+}
+
+.progress-step {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.progress-link {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, rgba(229, 210, 183, 0.28), rgba(229, 210, 183, 0.08));
+}
+
+.progress-dot {
+  width: 0.72rem;
+  height: 0.72rem;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  border: 1px solid rgba(229, 210, 183, 0.3);
+  background: rgba(255, 248, 236, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(10, 7, 7, 0.22);
+}
+
+.progress-dot-current {
+  border-color: rgba(235, 214, 177, 0.7);
+  background: radial-gradient(circle at 35% 35%, rgba(255, 248, 230, 0.95), rgba(216, 179, 117, 0.9));
+  box-shadow: 0 0 0 4px rgba(201, 157, 90, 0.12);
+}
+
+.progress-dot-complete {
+  border-color: rgba(209, 181, 131, 0.6);
+  background: linear-gradient(180deg, rgba(226, 202, 157, 0.95), rgba(182, 132, 71, 0.92));
+}
+
+.folio-input::placeholder {
+  color: rgba(196, 175, 149, 0.46);
+}
+
+.folio-input:focus {
+  border-color: rgba(214, 177, 118, 0.46);
+  box-shadow:
+    0 0 0 2px rgba(195, 149, 79, 0.16),
+    inset 0 1px 0 rgba(255, 247, 232, 0.05);
+}
+
+.feedback-note,
+.hint-note,
+.clue-note {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(227, 208, 177, 0.11);
+  padding: 0.95rem 1rem;
+  line-height: 1.75;
+}
+
+.feedback-note {
+  background: rgba(255, 246, 230, 0.05);
+  color: rgba(243, 232, 214, 0.88);
+}
+
+.feedback-note-success {
+  border-color: rgba(205, 175, 121, 0.2);
+  background:
+    linear-gradient(90deg, rgba(196, 149, 79, 0.16), rgba(196, 149, 79, 0.04)),
+    rgba(255, 246, 230, 0.05);
+  box-shadow: 0 0 0 1px rgba(196, 149, 79, 0.05), 0 10px 24px rgba(67, 43, 21, 0.12);
+}
+
+.feedback-note-error {
+  border-color: rgba(151, 74, 84, 0.16);
+  background:
+    linear-gradient(90deg, rgba(118, 44, 54, 0.18), rgba(118, 44, 54, 0.04)),
+    rgba(255, 246, 230, 0.04);
+  animation: feedbackPulse 260ms ease;
+}
+
+.feedback-note-easter {
+  border-color: rgba(178, 145, 88, 0.16);
+  background:
+    linear-gradient(90deg, rgba(168, 124, 64, 0.12), rgba(168, 124, 64, 0.03)),
+    rgba(255, 246, 230, 0.04);
+}
+
+.hint-note {
+  background:
+    linear-gradient(90deg, rgba(192, 145, 87, 0.06), transparent 55%),
+    rgba(15, 10, 10, 0.44);
+  color: rgba(235, 223, 205, 0.85);
+}
+
+.hint-reveal {
+  animation: hintRise 320ms ease both;
+}
+
+.clue-note {
+  background:
+    linear-gradient(90deg, rgba(117, 34, 47, 0.16), rgba(117, 34, 47, 0.06)),
+    rgba(13, 8, 9, 0.48);
+  color: rgba(235, 224, 203, 0.9);
+}
+
+.clue-pill {
+  border-radius: 999px;
+  border: 1px solid rgba(224, 204, 173, 0.14);
+  background:
+    linear-gradient(180deg, rgba(255, 250, 241, 0.08), rgba(255, 250, 241, 0.03)),
+    rgba(16, 9, 10, 0.48);
+  color: rgba(246, 236, 220, 0.95);
+  box-shadow:
+    0 0 20px rgba(186, 144, 82, 0.05),
+    inset 0 1px 0 rgba(255, 247, 236, 0.06);
+}
+
+.opening-card {
+  padding: 3.5rem 2.2rem;
+  animation: openingFade 1s ease both;
+}
+
+.opening-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.opening-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 250, 240, 0.96), transparent);
+  animation: lineSweep 1.8s ease-in-out infinite;
+}
+
+.page-turn-panel {
+  perspective: 1400px;
+  transform-origin: left center;
+  animation: pageTurnIn 560ms cubic-bezier(0.2, 0.72, 0.2, 1) both;
+}
+
+.library-visual {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid rgba(233, 216, 188, 0.12);
+  background:
+    linear-gradient(180deg, rgba(255, 248, 236, 0.04), rgba(255, 248, 236, 0.015)),
+    rgba(11, 7, 8, 0.42);
+  box-shadow:
+    0 34px 80px var(--shadow-deep),
+    0 12px 40px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 246, 228, 0.05);
+}
+
+.library-visual::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(229, 210, 179, 0.08);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.library-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 14% 26%, rgba(255, 245, 227, 0.24) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 62% 38%, rgba(255, 237, 199, 0.16) 0 1px, transparent 2px),
+    radial-gradient(circle at 78% 18%, rgba(255, 250, 244, 0.18) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 36% 70%, rgba(255, 241, 219, 0.14) 0 1px, transparent 1.8px);
+  background-size: 180px 180px, 260px 260px, 220px 220px, 240px 240px;
+  opacity: 0.16;
+  animation: dustFloat 20s linear infinite;
+}
+
+.seal-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(184, 132, 69, 0.34);
+  background:
+    radial-gradient(circle at 50% 45%, rgba(183, 128, 64, 0.26), rgba(90, 36, 23, 0.74)),
+    rgba(71, 22, 18, 0.62);
+  box-shadow:
+    0 14px 30px rgba(37, 10, 8, 0.24),
+    inset 0 1px 0 rgba(255, 233, 204, 0.18);
+  transform: rotate(-11deg);
+  animation: sealStamp 320ms cubic-bezier(0.18, 0.8, 0.2, 1) both;
+}
+
+.seal-mark-inner {
+  display: inline-flex;
+  width: 4.3rem;
+  height: 4.3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px dashed rgba(239, 212, 171, 0.4);
+  color: rgba(248, 231, 203, 0.88);
+  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.certificate-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid rgba(154, 118, 72, 0.2);
+  background:
+    linear-gradient(180deg, rgba(246, 238, 223, 0.96), rgba(228, 214, 193, 0.92)),
+    #efe3d0;
+  box-shadow:
+    0 26px 64px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 250, 240, 0.72);
+}
+
+.certificate-card::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(114, 82, 49, 0.16);
+  pointer-events: none;
+}
+
+.certificate-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.44), transparent 20%),
+    radial-gradient(circle at 82% 78%, rgba(120, 74, 41, 0.08), transparent 22%),
+    linear-gradient(135deg, rgba(121, 80, 41, 0.05) 0 1px, transparent 1px 10px);
+  opacity: 0.5;
+}
+
+.certificate-card-inner {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1.6rem;
+  text-align: center;
+}
+
+.certificate-kicker {
+  color: rgba(98, 70, 44, 0.78);
+  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.certificate-body {
+  color: rgba(58, 41, 29, 0.84);
+  line-height: 1.9;
+}
+
+@keyframes openingFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes hintRise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes feedbackPulse {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(2px);
+  }
+  66% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes lineSweep {
+  from {
+    transform: translateX(-140%);
+  }
+  to {
+    transform: translateX(140%);
+  }
+}
+
+@keyframes pageTurnIn {
+  0% {
+    opacity: 0;
+    transform: rotateY(-14deg) translateX(18px) scale(0.992);
+    filter: blur(4px);
+  }
+  55% {
+    opacity: 1;
+    transform: rotateY(4deg) translateX(-2px) scale(1);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes textRise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dustFloat {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-10px, 8px, 0);
+  }
+  to {
+    transform: translate3d(8px, -6px, 0);
+  }
+}
+
+@keyframes sealStamp {
+  0% {
+    opacity: 0;
+    transform: rotate(-16deg) scale(1.22);
+    filter: blur(2px);
+  }
+  70% {
+    opacity: 1;
+    transform: rotate(-9deg) scale(0.96);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-11deg) scale(1);
+    filter: blur(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .opening-card {
+    padding: 2.75rem 1.5rem;
+  }
+
+  .folio-panel {
+    padding: 1.25rem;
+  }
+
+  .catalog-card {
+    padding: 1rem;
+  }
+
+  .editorial-button,
+  .editorial-button-secondary,
+  .editorial-button-ghost {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .opening-card,
+  .folio-surface > *,
+  .opening-line::after,
+  .page-turn-panel,
+  .library-visual::after,
+  .seal-mark {
+    animation: none;
+  }
+
+  .editorial-button,
+  .editorial-button-secondary,
+  .editorial-button-ghost {
+    transition: none;
+  }
+}
